@@ -1,0 +1,17 @@
+# 忽略Git安装程序
+GitInstaller.exe
+
+# 忽略编辑器文件
+.vscode/
+.idea/
+
+# 忽略系统文件
+Thumbs.db
+.DS_Store
+
+# 忽略构建产物
+build/
+dist/
+
+# 忽略依赖包
+node_modules/
