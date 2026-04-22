@@ -1,13 +1,15 @@
 # Figma提示词 - 主界面与导航系统
 
 ## 模块概述
-主界面是玩家进入游戏后的第一个界面，包含所有核心系统的入口，需要清晰展示玩家状态和快速访问功能。
+
+主界面是玩家进入游戏后的第一个界面，包含所有核心系统的入口，需要清晰展示玩家状态和快速访问功能。根据最新系统设计，去掉了圣女系统，添加了炼丹和炼器入口。
 
 ---
 
 ## 1. 主界面（Main Interface）
 
 ### 整体布局
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  [玩家头像+名称]  [境界图标]  [灵石]  [仙玉]  [设置]  [消息] │
@@ -16,17 +18,17 @@
 │                      [背景场景]                             │
 │                                                             │
 │   ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐      │
-│   │  冒险   │  │  伙伴   │  │  宗门   │  │  圣女   │      │
+│   │  冒险   │  │  伙伴   │  │  宗门   │  │  炼丹   │      │
 │   │  [图标] │  │  [图标] │  │  [图标] │  │  [图标] │      │
 │   └─────────┘  └─────────┘  └─────────┘  └─────────┘      │
 │                                                             │
-│   ┌─────────┐  ┌─────────┐  ┌─────────┐                   │
-│   │  背包   │  │  任务   │  │  竞技场 │                   │
-│   │  [图标] │  │  [图标] │  │  [图标] │                   │
-│   └─────────┘  └─────────┘  └─────────┘                   │
+│   ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐      │
+│   │  背包   │  │  任务   │  │  竞技场 │  │  炼器   │      │
+│   │  [图标] │  │  [图标] │  │  [图标] │  │  [图标] │      │
+│   └─────────┘  └─────────┘  └─────────┘  └─────────┘      │
 │                                                             │
 │   ┌─────────────────────────────────────────────┐          │
-│   │         [体力条]  [精力条]  [每日任务入口]    │          │
+│   │         [体力条]  [精力条]  [每日任务入口]   │          │
 │   └─────────────────────────────────────────────┘          │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
@@ -48,10 +50,11 @@
    - 冒险：剑与山的图标，代表主线冒险
    - 伙伴：人物剪影图标，代表队伍管理
    - 宗门：宫殿建筑图标，代表宗门系统
+   - 炼丹：丹炉图标，代表炼丹系统
    - 背包：储物袋图标，代表物品管理
    - 任务：卷轴图标，代表任务系统
    - 竞技场：擂台图标，代表PVP
-   - 更多：汉堡菜单图标
+   - 炼器：锤子与火焰图标，代表炼器系统
 
 4. 底部状态栏：
    - 体力条（绿色渐变）+ 数值
@@ -271,4 +274,73 @@
 - 技能可拖拽到快捷栏
 - 冷却结束有闪光提示
 - 点击技能有能量波扩散
+```
+
+---
+
+## 美术资源需求
+
+### 1. 图标资源
+
+| 图标名称 | 描述 | 建议风格 | 推荐AI工具 |
+|----------|------|----------|------------|
+| 冒险图标 | 剑与山组合 | 仙侠古风 | Midjourney, Stable Diffusion |
+| 伙伴图标 | 人物剪影 | 简洁线条 | Midjourney |
+| 宗门图标 | 宫殿建筑 | 仙侠古风 | Midjourney, DALL-E |
+| 炼丹图标 | 丹炉 | 仙侠古风 | Midjourney |
+| 背包图标 | 储物袋 | 仙侠古风 | Midjourney |
+| 任务图标 | 卷轴 | 仙侠古风 | Midjourney |
+| 竞技场图标 | 擂台 | 仙侠古风 | Midjourney |
+| 炼器图标 | 锤子与火焰 | 仙侠古风 | Midjourney |
+| 设置图标 | 齿轮 | 仙侠古风 | Figma自带 |
+| 消息图标 | 铃铛 | 仙侠古风 | Midjourney |
+
+### 2. 背景资源
+
+| 背景名称 | 描述 | 建议风格 | 推荐AI工具 |
+|----------|------|----------|------------|
+| 主界面背景 | 云雾飘动动态背景 | 水墨仙侠 | Stable Diffusion (动画版) |
+| 宗门背景 | 宫殿山水 | 仙侠古风 | Midjourney |
+| 战斗背景 | 各种地形场景 | 仙侠古风 | Midjourney |
+
+### 3. 角色立绘
+
+| 角色类型 | 描述 | 建议风格 | 推荐AI工具 |
+|----------|------|----------|------------|
+| 主角立绘 | 多角度立绘 | 仙侠古风 | Midjourney, NovelAI |
+| 伙伴立绘 | 各种职业立绘 | 仙侠古风 | Midjourney |
+| NPC立绘 | 各种NPC立绘 | 仙侠古风 | Midjourney |
+| 敌人立绘 | 各种怪物立绘 | 仙侠古风 | Midjourney |
+
+### 4. UI装饰元素
+
+| 元素名称 | 描述 | 建议风格 | 推荐AI工具 |
+|----------|------|----------|------------|
+| 云纹边框 | UI边框装饰 | 仙侠古风 | Midjourney |
+| 按钮背景 | 各种按钮样式 | 仙侠古风 | Midjourney |
+| 面板背景 | 各种面板样式 | 仙侠古风 | Midjourney |
+| 图标边框 | 头像/物品边框 | 仙侠古风 | Midjourney |
+
+---
+
+## AI生成提示词示例
+
+### 主界面背景
+```
+A mystical Chinese cultivation game main menu background, ethereal misty mountains, floating jade clouds, traditional Chinese architecture in the distance, soft golden sunlight rays, ink wash painting style, 4K, ultra detailed, cinematic lighting
+```
+
+### 丹炉图标
+```
+Ancient Chinese alchemy furnace icon, golden and bronze colors, mystical flames inside, ornate patterns, simple flat design, transparent background, PNG format, game UI style
+```
+
+### 剑修立绘
+```
+Female sword cultivator character art, flowing white robes, longsword on back, standing in mountain peak, dramatic wind, beautiful face, traditional Chinese fantasy art style, full body, high detail
+```
+
+### 云纹边框
+```
+Traditional Chinese cloud pattern border frame, ornate decorative corners, gold and white colors, suitable for game UI panels, seamless pattern, transparent background, PNG format
 ```
